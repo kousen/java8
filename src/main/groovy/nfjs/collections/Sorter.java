@@ -6,10 +6,18 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Created by kousen on 3/5/15.
- */
 public class Sorter {
+    public List<String> sortWithComparator() {
+        List<String> sampleStrings = StringSamples.getSampleStrings();
+        Collections.sort(sampleStrings, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.length() - s2.length();
+            }
+        });
+        return sampleStrings;
+    }
+
     public List<String> sortAlpha() {
         List<String> sampleStrings = StringSamples.getSampleStrings();
         Collections.sort(sampleStrings);
@@ -18,8 +26,10 @@ public class Sorter {
 
     public List<String> sortByLength() {
         List<String> sampleStrings = StringSamples.getSampleStrings();
+
         Collections.sort(sampleStrings,
-                (s1, s2) -> Integer.compare(s1.length(), s2.length()));
+                (s1, s2) ->
+                        Integer.compare(s1.length(), s2.length()));
         return sampleStrings;
     }
 
@@ -34,7 +44,15 @@ public class Sorter {
 
     public List<String> lengthSortComparator() {
         List<String> sampleStrings = StringSamples.getSampleStrings();
-        Collections.sort(sampleStrings, Comparator.comparingInt(String::length));
+        Collections.sort(sampleStrings,
+                Comparator.comparingInt(String::length));
+        return sampleStrings;
+    }
+
+    public List<String> lengthReverseSortComparator() {
+        List<String> sampleStrings = StringSamples.getSampleStrings();
+        Collections.sort(sampleStrings,
+                (s1, s2) -> -Integer.compare(s1.length(), s2.length()));
         return sampleStrings;
     }
 

@@ -45,7 +45,7 @@ public class UseInstant {
         // until with ChronoUnit gives days between
         long gap = groundHogDay.until(firstDayofSpring, ChronoUnit.DAYS);
         System.out.println("There are " + gap +
-                " days between Ground Hog Day and 1st day of Spring");
+                " days between GroundHog Day and 1st day of Spring");
         System.out.println("That's " + (gap/7) + " weeks and " +
                 (gap % 7) + " days");
 

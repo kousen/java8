@@ -11,6 +11,8 @@ public class UseTasks {
                 .mapToInt(Task::getDuration)
                 .average()
                 .getAsDouble();
-        System.out.printf("The average duration is %s%n", averageDuration);
+        System.out.printf(
+                "The average duration is %s%n",
+                averageDuration);
     }
 }
