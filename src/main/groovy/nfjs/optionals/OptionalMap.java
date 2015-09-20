@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class UsingOptionals {
+public class OptionalMap {
     private Map<String,Integer> map = new HashMap<>();
 
-    public UsingOptionals() {
+    public OptionalMap() {
         map.put("a", 1);
         map.put("b", 2);
         map.put("c", 2);
@@ -22,7 +22,7 @@ public class UsingOptionals {
     }
 
     public static void main(String[] args) {
-        UsingOptionals uo = new UsingOptionals();
+        OptionalMap uo = new OptionalMap();
         System.out.println(uo.getMap());
         System.out.println(uo.getMap().get("d"));
         System.out.println(uo.getValue("d"));

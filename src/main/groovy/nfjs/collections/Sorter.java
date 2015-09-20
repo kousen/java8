@@ -9,6 +9,13 @@ import java.util.List;
 public class Sorter {
     public List<String> sortWithComparator() {
         List<String> sampleStrings = StringSamples.getSampleStrings();
+        Collections.sort(sampleStrings, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s2.length() - s1.length();
+            }
+        });
+
         Collections.sort(sampleStrings,
                 (s1, s2) -> s1.length() - s2.length());
         return sampleStrings;

@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class UseInstant {
     public static void main(String[] args) {
-/*        Instant now = Instant.now();
+        Instant now = Instant.now();
         System.out.println(now);
 
         Instant then = now.plus(1, ChronoUnit.DAYS);
@@ -26,14 +26,16 @@ public class UseInstant {
                 .plusMillis(100)
                 .plusNanos(100);
         System.out.println(then);
-*/
+
         LocalDate date1 = LocalDate.now();
         System.out.println(date1);
 
-        LocalDate groundHogDay = LocalDate.of(2015, Month.FEBRUARY, 2);
+        LocalDate groundHogDay =
+                LocalDate.of(2015, Month.FEBRUARY, 2);
         System.out.println(groundHogDay);
 
-        LocalDate firstDayofSpring = LocalDate.of(2015, 3, 20);
+        LocalDate firstDayofSpring =
+                LocalDate.of(2015, 3, 20);
 
         // Day of week available
         System.out.println("First day of spring this year falls on a " +
@@ -46,7 +48,7 @@ public class UseInstant {
         long gap = groundHogDay.until(firstDayofSpring, ChronoUnit.DAYS);
         System.out.println("There are " + gap +
                 " days between GroundHog Day and 1st day of Spring");
-        System.out.println("That's " + (gap/7) + " weeks and " +
+        System.out.println("That's " + (gap / 7) + " weeks and " +
                 (gap % 7) + " days");
 
         Set<String> availableTimeZones = ZoneId.getAvailableZoneIds();
@@ -69,5 +71,6 @@ public class UseInstant {
         DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(Locale.FRANCE);
         System.out.println(formatter.format(spring));
+
     }
 }
