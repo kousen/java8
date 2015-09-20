@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class UseInstant {
     public static void main(String[] args) {
-        Instant now = Instant.now();
+/*        Instant now = Instant.now();
         System.out.println(now);
 
         Instant then = now.plus(1, ChronoUnit.DAYS);
@@ -26,7 +26,7 @@ public class UseInstant {
                 .plusMillis(100)
                 .plusNanos(100);
         System.out.println(then);
-
+*/
         LocalDate date1 = LocalDate.now();
         System.out.println(date1);
 
@@ -69,7 +69,5 @@ public class UseInstant {
         DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(Locale.FRANCE);
         System.out.println(formatter.format(spring));
-
-
     }
 }

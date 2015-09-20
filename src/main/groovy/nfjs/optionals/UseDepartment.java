@@ -1,5 +1,7 @@
 package nfjs.optionals;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class UseDepartment {
@@ -28,5 +30,10 @@ public class UseDepartment {
                         .map(Manager::getName)
                         .orElse("Unknown")
         );
+
+        String name = "Mal Reynolds";
+        Map<String, Manager> managers = new HashMap<>();
+        Manager manager = managers.computeIfAbsent(name, Manager::new);
+        System.out.println(managers);
     }
 }

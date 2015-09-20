@@ -1,8 +1,5 @@
 package nfjs.collections
 
-/**
- * Created by kousen on 3/8/15.
- */
 class TaskSamples {
     static List<Task> getSampleTasks() {
         [new Task(id: 1, active: true, duration: 3,
