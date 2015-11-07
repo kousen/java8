@@ -63,7 +63,7 @@ public class Sorter {
         List<String> sampleStrings = StringSamples.getSampleStrings();
         Collections.sort(sampleStrings,
                 Comparator.comparingInt(String::length)
-                        .thenComparing(Comparator.<String>naturalOrder()));
+                        .thenComparing(Comparator.naturalOrder()));
         return sampleStrings;
     }
 }

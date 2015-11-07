@@ -18,11 +18,12 @@ public class AssignDemo {
                 .filter(x -> x % 3 == 0)
                 .forEach(System.out::println);
 
+        /*
         Predicate<Integer> mod3 = x -> x % 3 == 0;
         Arrays.asList(3, 1, 4, 1, 5, 9)
-                .stream()
-                .filter(mod3)
+                .parallelStream()
+//                .filter(mod3)
                 .forEach(System.out::println);
-
+        */
     }
 }
