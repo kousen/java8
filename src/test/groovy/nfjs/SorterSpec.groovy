@@ -3,9 +3,6 @@ package nfjs
 import nfjs.collections.Sorter
 import spock.lang.Specification
 
-/**
- * Created by kousen on 3/5/15.
- */
 class SorterSpec extends Specification {
     Sorter sorter = new Sorter()
 
@@ -50,7 +47,8 @@ class SorterSpec extends Specification {
 
         then:
         results.inject { prev, curr ->
-
+            assert prev.size() < curr.size() || prev <= curr
+            curr
         }
     }
 
